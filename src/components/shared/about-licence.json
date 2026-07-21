@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_shared_about_licences",
+  "info": {
+    "displayName": "about_licence"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "text": {
+      "type": "text"
+    },
+    "down_text": {
+      "type": "text"
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

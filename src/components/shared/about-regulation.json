@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_about_regulations",
+  "info": {
+    "displayName": "about_regulation"
+  },
+  "options": {},
+  "attributes": {
+    "title_section": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "regulation_items": {
+      "type": "component",
+      "component": "shared.regulation-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

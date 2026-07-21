@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_accreditations",
+  "info": {
+    "singularName": "page-accreditation",
+    "pluralName": "page-accreditations",
+    "displayName": "page_accreditation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "Subtitle": {
+      "type": "text"
+    },
+    "docs_list": {
+      "type": "component",
+      "component": "shared.document-item",
+      "repeatable": true
+    },
+    "banner_section": {
+      "type": "component",
+      "component": "shared.banner-v1",
+      "repeatable": false
+    },
+    "Seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    }
+  }
+}

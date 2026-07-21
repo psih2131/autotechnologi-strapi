@@ -1,0 +1,85 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_abouts",
+  "info": {
+    "singularName": "page-about",
+    "pluralName": "page-abouts",
+    "displayName": "page_about"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero_section": {
+      "type": "component",
+      "component": "shared.about-hero",
+      "repeatable": false
+    },
+    "About_company_section": {
+      "type": "component",
+      "component": "shared.program-about-sec",
+      "repeatable": false
+    },
+    "gallery_section": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Offices_section": {
+      "type": "component",
+      "component": "shared.about-offices",
+      "repeatable": false
+    },
+    "Why_we_section": {
+      "type": "component",
+      "component": "shared.about-why",
+      "repeatable": false
+    },
+    "video_section": {
+      "type": "string"
+    },
+    "regulation_section": {
+      "type": "component",
+      "component": "shared.about-regulation",
+      "repeatable": false
+    },
+    "licence_section": {
+      "type": "component",
+      "component": "shared.about-licence",
+      "repeatable": false
+    },
+    "banner_section": {
+      "type": "component",
+      "component": "shared.banner-v2",
+      "repeatable": false
+    },
+    "reviews_video_youtybes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::reviews-video-youtybe.reviews-video-youtybe"
+    },
+    "reviews_texts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::reviews-text.reviews-text"
+    },
+    "letters_section": {
+      "type": "component",
+      "component": "shared.about-letters",
+      "repeatable": false
+    },
+    "down_banner_section": {
+      "type": "component",
+      "component": "shared.banner-v1",
+      "repeatable": false
+    },
+    "Seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    }
+  }
+}

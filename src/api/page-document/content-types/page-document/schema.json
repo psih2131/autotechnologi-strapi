@@ -1,0 +1,52 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_documents",
+  "info": {
+    "singularName": "page-document",
+    "pluralName": "page-documents",
+    "displayName": "page_document"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title_docs": {
+      "type": "string"
+    },
+    "docs_list": {
+      "type": "component",
+      "component": "shared.document-item",
+      "repeatable": true
+    },
+    "licence_title": {
+      "type": "string"
+    },
+    "licence_subtitle": {
+      "type": "text"
+    },
+    "licence_text": {
+      "type": "text"
+    },
+    "licence_down_text": {
+      "type": "text"
+    },
+    "images_for_slider": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "banner_section": {
+      "type": "component",
+      "component": "shared.banner-v1",
+      "repeatable": false
+    },
+    "Seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    }
+  }
+}

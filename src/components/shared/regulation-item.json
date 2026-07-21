@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_regulation_items",
+  "info": {
+    "displayName": "regulation_item"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

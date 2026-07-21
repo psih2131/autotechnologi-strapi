@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_about_program_items",
+  "info": {
+    "displayName": "about_program_item"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

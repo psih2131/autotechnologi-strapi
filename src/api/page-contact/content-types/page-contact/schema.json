@@ -1,0 +1,48 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_contacts",
+  "info": {
+    "singularName": "page-contact",
+    "pluralName": "page-contacts",
+    "displayName": "page_contact"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sales_departments": {
+      "type": "component",
+      "component": "shared.contacts-items",
+      "repeatable": true
+    },
+    "educational_department": {
+      "type": "component",
+      "component": "shared.contacts-items",
+      "repeatable": true
+    },
+    "representative_offices": {
+      "type": "component",
+      "component": "shared.contacts-items",
+      "repeatable": true
+    },
+    "socials_media": {
+      "type": "component",
+      "component": "shared.contacts-items",
+      "repeatable": true
+    },
+    "map_coordinates_yandex": {
+      "type": "string"
+    },
+    "banner_section": {
+      "type": "component",
+      "component": "shared.banner-v1",
+      "repeatable": false
+    },
+    "Seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    }
+  }
+}

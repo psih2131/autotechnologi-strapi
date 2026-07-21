@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_program_training_items",
+  "info": {
+    "displayName": "program_training_item"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

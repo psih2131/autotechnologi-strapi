@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "partners_components",
+  "info": {
+    "singularName": "partners-component",
+    "pluralName": "partners-components",
+    "displayName": "_partners_component"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "logos": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

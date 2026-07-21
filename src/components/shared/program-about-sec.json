@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_program_about_secs",
+  "info": {
+    "displayName": "program_about_sec"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "about_item": {
+      "type": "component",
+      "component": "shared.about-program-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

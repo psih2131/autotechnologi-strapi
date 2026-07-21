@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_shared_about_whies",
+  "info": {
+    "displayName": "about_why"
+  },
+  "options": {},
+  "attributes": {
+    "title_section": {
+      "type": "string"
+    },
+    "box_1_title": {
+      "type": "string"
+    },
+    "box_1_subtitle": {
+      "type": "string"
+    },
+    "box_1_text": {
+      "type": "text"
+    },
+    "box_1_images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "box_2_titlr": {
+      "type": "string"
+    },
+    "box_2_subtitle": {
+      "type": "text"
+    },
+    "box_3_title": {
+      "type": "string"
+    },
+    "box_3_text": {
+      "type": "text"
+    },
+    "box_4_title": {
+      "type": "string"
+    },
+    "box_4_text": {
+      "type": "text"
+    },
+    "box_5_title": {
+      "type": "string"
+    },
+    "box_5_text": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

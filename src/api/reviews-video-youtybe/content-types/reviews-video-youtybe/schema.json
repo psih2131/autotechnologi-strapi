@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reviews_video_youtybes",
+  "info": {
+    "singularName": "reviews-video-youtybe",
+    "pluralName": "reviews-video-youtybes",
+    "displayName": "reviews_video_youtybe"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "video_code": {
+      "type": "string"
+    },
+    "program": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::program.program",
+      "inversedBy": "reviews_video_youtybes"
+    }
+  }
+}

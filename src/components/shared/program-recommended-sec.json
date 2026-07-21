@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_program_recommended_secs",
+  "info": {
+    "displayName": "program_recommended_sec"
+  },
+  "options": {},
+  "attributes": {
+    "section_title": {
+      "type": "string",
+      "default": "Другие курсы по направлению"
+    },
+    "programs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::program.program"
+    }
+  },
+  "config": {}
+}

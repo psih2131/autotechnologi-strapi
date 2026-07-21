@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_about_offices",
+  "info": {
+    "displayName": "about_offices"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "office_1_title": {
+      "type": "string"
+    },
+    "office_1_adres": {
+      "type": "string"
+    },
+    "office_2_title": {
+      "type": "string"
+    },
+    "office_2_adres": {
+      "type": "string"
+    },
+    "office_3_title": {
+      "type": "string"
+    },
+    "office_3_adres": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

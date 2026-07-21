@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_all_programs",
+  "info": {
+    "singularName": "page-all-program",
+    "pluralName": "page-all-programs",
+    "displayName": "page_all_programs"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "banner_section": {
+      "type": "component",
+      "component": "shared.banner-v1",
+      "repeatable": false
+    },
+    "Seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    }
+  }
+}

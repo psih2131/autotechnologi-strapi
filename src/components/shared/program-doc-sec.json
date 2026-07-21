@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_shared_program_doc_secs",
+  "info": {
+    "displayName": "program_doc_sec"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "doc_name": {
+      "type": "string"
+    },
+    "doc_file": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "doc_preview_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

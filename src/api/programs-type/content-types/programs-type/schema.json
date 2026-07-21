@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "programs_types",
+  "info": {
+    "singularName": "programs-type",
+    "pluralName": "programs-types",
+    "displayName": "programs_type"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "programs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::program.program",
+      "mappedBy": "programs_type"
+    }
+  }
+}

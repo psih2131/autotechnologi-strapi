@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reviews_texts",
+  "info": {
+    "singularName": "reviews-text",
+    "pluralName": "reviews-texts",
+    "displayName": "reviews_text"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "autor_name": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "program": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::program.program",
+      "inversedBy": "reviews_texts"
+    }
+  }
+}

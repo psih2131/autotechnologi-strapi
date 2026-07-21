@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_banner_v1s",
+  "info": {
+    "displayName": "banner_v1"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

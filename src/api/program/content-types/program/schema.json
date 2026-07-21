@@ -1,0 +1,131 @@
+{
+  "kind": "collectionType",
+  "collectionName": "programs",
+  "info": {
+    "singularName": "program",
+    "pluralName": "programs",
+    "displayName": "programs"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "programs_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::programs-category.programs-category",
+      "inversedBy": "programs"
+    },
+    "programs_type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::programs-type.programs-type",
+      "inversedBy": "programs"
+    },
+    "registration_is_open": {
+      "type": "boolean"
+    },
+    "best_seller": {
+      "type": "boolean"
+    },
+    "short_description": {
+      "type": "text"
+    },
+    "programs_training_format": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::programs-training-format.programs-training-format",
+      "inversedBy": "programs"
+    },
+    "duration_of_study_hours": {
+      "type": "float"
+    },
+    "price_rub": {
+      "type": "integer"
+    },
+    "payment_in_shares_available": {
+      "type": "boolean"
+    },
+    "long_description_for_hero_section": {
+      "type": "text"
+    },
+    "hero_img_1": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "hero_img_2": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "for_who_section": {
+      "type": "component",
+      "component": "shared.for-who-card",
+      "repeatable": true
+    },
+    "Training_program_staps": {
+      "type": "component",
+      "component": "shared.program-training-item",
+      "repeatable": true
+    },
+    "Document_section": {
+      "type": "component",
+      "component": "shared.program-doc-sec",
+      "repeatable": false
+    },
+    "banner_section": {
+      "type": "component",
+      "component": "shared.banner-v1",
+      "repeatable": false
+    },
+    "Recommended_programs_section": {
+      "type": "component",
+      "component": "shared.program-recommended-sec",
+      "repeatable": false
+    },
+    "About_company_section": {
+      "type": "component",
+      "component": "shared.program-about-sec",
+      "repeatable": false
+    },
+    "gallery_section": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "reviews_video_youtybes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::reviews-video-youtybe.reviews-video-youtybe",
+      "mappedBy": "program"
+    },
+    "reviews_texts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::reviews-text.reviews-text",
+      "mappedBy": "program"
+    },
+    "Seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    }
+  }
+}
