@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_shared_home_start_secs",
+  "info": {
+    "displayName": "home_start_sec"
+  },
+  "options": {},
+  "attributes": {
+    "title_section": {
+      "type": "string"
+    },
+    "box_1_title": {
+      "type": "string"
+    },
+    "box_1_subtitle": {
+      "type": "text"
+    },
+    "box_1_button_text": {
+      "type": "string"
+    },
+    "box_2_title": {
+      "type": "string"
+    },
+    "box_2_text": {
+      "type": "text"
+    },
+    "box_2_button_title": {
+      "type": "string"
+    },
+    "box_2_file_for_download": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

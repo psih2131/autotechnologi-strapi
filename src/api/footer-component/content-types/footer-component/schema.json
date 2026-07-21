@@ -1,0 +1,49 @@
+{
+  "kind": "singleType",
+  "collectionName": "footer_components",
+  "info": {
+    "singularName": "footer-component",
+    "pluralName": "footer-components",
+    "displayName": "_footer_component"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sales_departments": {
+      "type": "component",
+      "component": "shared.contacts-items",
+      "repeatable": true
+    },
+    "educational_department": {
+      "type": "component",
+      "component": "shared.contacts-items",
+      "repeatable": true
+    },
+    "representative_offices": {
+      "type": "component",
+      "component": "shared.contacts-items",
+      "repeatable": true
+    },
+    "socials_media": {
+      "type": "component",
+      "component": "shared.contacts-items",
+      "repeatable": true
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "legal_text": {
+      "type": "text"
+    },
+    "copyright_text": {
+      "type": "string",
+      "default": "© Все права защищены"
+    }
+  }
+}

@@ -152,6 +152,28 @@ export interface SharedDocumentItem extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedFaqItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_faq_items';
+  info: {
+    displayName: 'faq_item';
+  };
+  attributes: {
+    text: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedFaqSec extends Struct.ComponentSchema {
+  collectionName: 'components_shared_faq_secs';
+  info: {
+    displayName: 'faq_sec';
+  };
+  attributes: {
+    questions_list: Schema.Attribute.Component<'shared.faq-item', true>;
+    section_title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedForWhoCard extends Struct.ComponentSchema {
   collectionName: 'components_shared_for_who_cards';
   info: {
@@ -163,6 +185,83 @@ export interface SharedForWhoCard extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedHomeHero extends Struct.ComponentSchema {
+  collectionName: 'components_shared_home_heroes';
+  info: {
+    displayName: 'home_hero';
+  };
+  attributes: {
+    background_image: Schema.Attribute.Media<'images'>;
+    card_images: Schema.Attribute.Media<'images', true>;
+    hero_stats_items: Schema.Attribute.Component<
+      'shared.about-program-item',
+      true
+    >;
+    subtitle: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedHomeProgCat extends Struct.ComponentSchema {
+  collectionName: 'components_shared_home_prog_cats';
+  info: {
+    displayName: 'home_prog_cat';
+  };
+  attributes: {
+    programs_categories: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::programs-category.programs-category'
+    >;
+  };
+}
+
+export interface SharedHomeProgramCat extends Struct.ComponentSchema {
+  collectionName: 'components_shared_home_program_cats';
+  info: {
+    displayName: 'home_program_cat';
+  };
+  attributes: {
+    most_popular_category: Schema.Attribute.Component<
+      'shared.home-prog-cat',
+      false
+    >;
+    other_popular_categories: Schema.Attribute.Component<
+      'shared.home-prog-cat',
+      true
+    >;
+  };
+}
+
+export interface SharedHomeRecomentPrograms extends Struct.ComponentSchema {
+  collectionName: 'components_shared_home_recoment_programs';
+  info: {
+    displayName: 'home_recoment_programs';
+  };
+  attributes: {
+    programs: Schema.Attribute.Relation<'oneToMany', 'api::program.program'>;
+    title_section: Schema.Attribute.String;
+  };
+}
+
+export interface SharedHomeStartSec extends Struct.ComponentSchema {
+  collectionName: 'components_shared_home_start_secs';
+  info: {
+    displayName: 'home_start_sec';
+  };
+  attributes: {
+    box_1_button_text: Schema.Attribute.String;
+    box_1_subtitle: Schema.Attribute.Text;
+    box_1_title: Schema.Attribute.String;
+    box_2_button_title: Schema.Attribute.String;
+    box_2_file_for_download: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    box_2_text: Schema.Attribute.Text;
+    box_2_title: Schema.Attribute.String;
+    title_section: Schema.Attribute.String;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -171,6 +270,17 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
   attributes: {
     file: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+  };
+}
+
+export interface SharedNewsRec extends Struct.ComponentSchema {
+  collectionName: 'components_shared_news_recs';
+  info: {
+    displayName: 'news_rec';
+  };
+  attributes: {
+    news: Schema.Attribute.Relation<'oneToMany', 'api::new.new'>;
+    title_section: Schema.Attribute.String;
   };
 }
 
@@ -317,8 +427,16 @@ declare module '@strapi/strapi' {
       'shared.banner-v2': SharedBannerV2;
       'shared.contacts-items': SharedContactsItems;
       'shared.document-item': SharedDocumentItem;
+      'shared.faq-item': SharedFaqItem;
+      'shared.faq-sec': SharedFaqSec;
       'shared.for-who-card': SharedForWhoCard;
+      'shared.home-hero': SharedHomeHero;
+      'shared.home-prog-cat': SharedHomeProgCat;
+      'shared.home-program-cat': SharedHomeProgramCat;
+      'shared.home-recoment-programs': SharedHomeRecomentPrograms;
+      'shared.home-start-sec': SharedHomeStartSec;
       'shared.media': SharedMedia;
+      'shared.news-rec': SharedNewsRec;
       'shared.program-about-sec': SharedProgramAboutSec;
       'shared.program-doc-sec': SharedProgramDocSec;
       'shared.program-recommended-sec': SharedProgramRecommendedSec;

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_home_prog_cats",
+  "info": {
+    "displayName": "home_prog_cat"
+  },
+  "options": {},
+  "attributes": {
+    "programs_categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::programs-category.programs-category"
+    }
+  },
+  "config": {}
+}

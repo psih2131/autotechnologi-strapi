@@ -441,6 +441,113 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiDocDoc extends Struct.CollectionTypeSchema {
+  collectionName: 'docs';
+  info: {
+    displayName: 'docs';
+    pluralName: 'docs';
+    singularName: 'doc';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::doc.doc'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Seo: Schema.Attribute.Component<'shared.seo', false>;
+    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
+    text: Schema.Attribute.RichText;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiFooterComponentFooterComponent
+  extends Struct.SingleTypeSchema {
+  collectionName: 'footer_components';
+  info: {
+    displayName: '_footer_component';
+    pluralName: 'footer-components';
+    singularName: 'footer-component';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    copyright_text: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'\u00A9 \u0412\u0441\u0435 \u043F\u0440\u0430\u0432\u0430 \u0437\u0430\u0449\u0438\u0449\u0435\u043D\u044B'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    educational_department: Schema.Attribute.Component<
+      'shared.contacts-items',
+      true
+    >;
+    legal_text: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::footer-component.footer-component'
+    > &
+      Schema.Attribute.Private;
+    logo: Schema.Attribute.Media<'images'>;
+    publishedAt: Schema.Attribute.DateTime;
+    representative_offices: Schema.Attribute.Component<
+      'shared.contacts-items',
+      true
+    >;
+    sales_departments: Schema.Attribute.Component<
+      'shared.contacts-items',
+      true
+    >;
+    socials_media: Schema.Attribute.Component<'shared.contacts-items', true>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiHeaderComponentHeaderComponent
+  extends Struct.SingleTypeSchema {
+  collectionName: 'header_components';
+  info: {
+    displayName: '_header_component';
+    pluralName: 'header-components';
+    singularName: 'header-component';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email;
+    email_link: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::header-component.header-component'
+    > &
+      Schema.Attribute.Private;
+    logo: Schema.Attribute.Media<'images'>;
+    phone: Schema.Attribute.String;
+    phone_link: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    socials_media: Schema.Attribute.Component<'shared.contacts-items', true>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiNewNew extends Struct.CollectionTypeSchema {
   collectionName: 'news';
   info: {
@@ -667,6 +774,50 @@ export interface ApiPageDocumentPageDocument extends Struct.SingleTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPageHomePageHome extends Struct.SingleTypeSchema {
+  collectionName: 'page_homes';
+  info: {
+    displayName: 'page_home';
+    pluralName: 'page-homes';
+    singularName: 'page-home';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    banner_section: Schema.Attribute.Component<'shared.banner-v2', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    down_banner_section: Schema.Attribute.Component<'shared.banner-v1', false>;
+    faq_section: Schema.Attribute.Component<'shared.faq-sec', false>;
+    hero_section: Schema.Attribute.Component<'shared.home-hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::page-home.page-home'
+    > &
+      Schema.Attribute.Private;
+    news_section: Schema.Attribute.Component<'shared.news-rec', false>;
+    popular_programs_section: Schema.Attribute.Component<
+      'shared.home-recoment-programs',
+      false
+    >;
+    programs_categories_section: Schema.Attribute.Component<
+      'shared.home-program-cat',
+      false
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    Seo: Schema.Attribute.Component<'shared.seo', false>;
+    start_section: Schema.Attribute.Component<'shared.home-start-sec', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Video_section: Schema.Attribute.String;
+    why_we_section: Schema.Attribute.Component<'shared.about-why', false>;
   };
 }
 
@@ -1446,12 +1597,16 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::doc.doc': ApiDocDoc;
+      'api::footer-component.footer-component': ApiFooterComponentFooterComponent;
+      'api::header-component.header-component': ApiHeaderComponentHeaderComponent;
       'api::new.new': ApiNewNew;
       'api::page-about.page-about': ApiPageAboutPageAbout;
       'api::page-accreditation.page-accreditation': ApiPageAccreditationPageAccreditation;
       'api::page-all-program.page-all-program': ApiPageAllProgramPageAllProgram;
       'api::page-contact.page-contact': ApiPageContactPageContact;
       'api::page-document.page-document': ApiPageDocumentPageDocument;
+      'api::page-home.page-home': ApiPageHomePageHome;
       'api::partners-component.partners-component': ApiPartnersComponentPartnersComponent;
       'api::program.program': ApiProgramProgram;
       'api::programs-category.programs-category': ApiProgramsCategoryProgramsCategory;

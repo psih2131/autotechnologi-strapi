@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "header_components",
+  "info": {
+    "singularName": "header-component",
+    "pluralName": "header-components",
+    "displayName": "_header_component"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "phone": {
+      "type": "string"
+    },
+    "phone_link": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "email_link": {
+      "type": "string"
+    },
+    "socials_media": {
+      "type": "component",
+      "component": "shared.contacts-items",
+      "repeatable": true
+    }
+  }
+}

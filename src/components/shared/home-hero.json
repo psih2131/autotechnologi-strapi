@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_shared_home_heroes",
+  "info": {
+    "displayName": "home_hero"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "hero_stats_items": {
+      "type": "component",
+      "component": "shared.about-program-item",
+      "repeatable": true
+    },
+    "card_images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "background_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

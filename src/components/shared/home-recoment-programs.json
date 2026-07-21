@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_home_recoment_programs",
+  "info": {
+    "displayName": "home_recoment_programs"
+  },
+  "options": {},
+  "attributes": {
+    "title_section": {
+      "type": "string"
+    },
+    "programs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::program.program"
+    }
+  },
+  "config": {}
+}

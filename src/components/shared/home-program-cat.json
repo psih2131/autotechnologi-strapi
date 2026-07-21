@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_shared_home_program_cats",
+  "info": {
+    "displayName": "home_program_cat"
+  },
+  "options": {},
+  "attributes": {
+    "most_popular_category": {
+      "type": "component",
+      "component": "shared.home-prog-cat",
+      "repeatable": false
+    },
+    "other_popular_categories": {
+      "type": "component",
+      "component": "shared.home-prog-cat",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

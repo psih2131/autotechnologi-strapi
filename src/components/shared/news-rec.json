@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_news_recs",
+  "info": {
+    "displayName": "news_rec"
+  },
+  "options": {},
+  "attributes": {
+    "title_section": {
+      "type": "string"
+    },
+    "news": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::new.new"
+    }
+  },
+  "config": {}
+}
