@@ -26,6 +26,9 @@
       "relation": "oneToMany",
       "target": "api::program.program",
       "mappedBy": "programs_type"
+    },
+    "color": {
+      "type": "string"
     }
   }
 }
