@@ -514,6 +514,33 @@ export interface ApiFooterComponentFooterComponent
   };
 }
 
+export interface ApiFormForm extends Struct.CollectionTypeSchema {
+  collectionName: 'forms';
+  info: {
+    displayName: '_forms';
+    pluralName: 'forms';
+    singularName: 'form';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::form.form'> &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    page_request: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiHeaderComponentHeaderComponent
   extends Struct.SingleTypeSchema {
   collectionName: 'header_components';
@@ -1600,6 +1627,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::doc.doc': ApiDocDoc;
       'api::footer-component.footer-component': ApiFooterComponentFooterComponent;
+      'api::form.form': ApiFormForm;
       'api::header-component.header-component': ApiHeaderComponentHeaderComponent;
       'api::new.new': ApiNewNew;
       'api::page-about.page-about': ApiPageAboutPageAbout;
