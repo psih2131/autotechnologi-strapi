@@ -44,6 +44,7 @@ export interface SharedAboutOffices extends Struct.ComponentSchema {
     displayName: 'about_offices';
   };
   attributes: {
+    map: Schema.Attribute.Component<'shared.map-component', false>;
     office_1_adres: Schema.Attribute.String;
     office_1_title: Schema.Attribute.String;
     office_2_adres: Schema.Attribute.String;
@@ -262,6 +263,37 @@ export interface SharedHomeStartSec extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedMapComponent extends Struct.ComponentSchema {
+  collectionName: 'components_shared_map_components';
+  info: {
+    displayName: 'map_component';
+  };
+  attributes: {
+    center_map: Schema.Attribute.String;
+    icon_marker: Schema.Attribute.Media<'images'>;
+    point: Schema.Attribute.Component<'shared.map-component-item', true>;
+    zoom: Schema.Attribute.Decimal &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 20;
+          min: 1;
+        },
+        number
+      >;
+  };
+}
+
+export interface SharedMapComponentItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_map_component_items';
+  info: {
+    displayName: 'map_component_item';
+  };
+  attributes: {
+    latitude: Schema.Attribute.String;
+    longitude: Schema.Attribute.String;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -435,6 +467,8 @@ declare module '@strapi/strapi' {
       'shared.home-program-cat': SharedHomeProgramCat;
       'shared.home-recoment-programs': SharedHomeRecomentPrograms;
       'shared.home-start-sec': SharedHomeStartSec;
+      'shared.map-component': SharedMapComponent;
+      'shared.map-component-item': SharedMapComponentItem;
       'shared.media': SharedMedia;
       'shared.news-rec': SharedNewsRec;
       'shared.program-about-sec': SharedProgramAboutSec;

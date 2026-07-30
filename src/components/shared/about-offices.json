@@ -25,6 +25,11 @@
     },
     "office_3_adres": {
       "type": "string"
+    },
+    "map": {
+      "type": "component",
+      "component": "shared.map-component",
+      "repeatable": false
     }
   },
   "config": {}

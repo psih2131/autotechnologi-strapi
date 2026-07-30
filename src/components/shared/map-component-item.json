@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_map_component_items",
+  "info": {
+    "displayName": "map_component_item"
+  },
+  "options": {},
+  "attributes": {
+    "longitude": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

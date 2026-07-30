@@ -750,7 +750,7 @@ export interface ApiPageContactPageContact extends Struct.SingleTypeSchema {
       'api::page-contact.page-contact'
     > &
       Schema.Attribute.Private;
-    map_coordinates_yandex: Schema.Attribute.String;
+    map: Schema.Attribute.Component<'shared.map-component', false>;
     publishedAt: Schema.Attribute.DateTime;
     representative_offices: Schema.Attribute.Component<
       'shared.contacts-items',

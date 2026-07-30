@@ -31,8 +31,10 @@
       "component": "shared.contacts-items",
       "repeatable": true
     },
-    "map_coordinates_yandex": {
-      "type": "string"
+    "map": {
+      "type": "component",
+      "component": "shared.map-component",
+      "repeatable": false
     },
     "banner_section": {
       "type": "component",

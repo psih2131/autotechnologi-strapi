@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_shared_map_components",
+  "info": {
+    "displayName": "map_component"
+  },
+  "options": {},
+  "attributes": {
+    "center_map": {
+      "type": "string"
+    },
+    "point": {
+      "type": "component",
+      "component": "shared.map-component-item",
+      "repeatable": true
+    },
+    "zoom": {
+      "type": "decimal",
+      "min": 1,
+      "max": 20
+    },
+    "icon_marker": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}
